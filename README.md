@@ -1,0 +1,1 @@
+Security-first internal knowledge assistant with FastAPI, LangChain, Qdrant, Streamlit, RBAC, guardrails, audit logs, Prometheus metrics, and CI evaluation gates.
