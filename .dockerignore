@@ -1,0 +1,91 @@
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Coverage and testing artifacts
+.coverage
+htmlcov/
+.tox/
+
+# Local databases and vector storage
+*.db
+qdrant_data/
+storage/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.bak
+```
+
+**Why is this useful?**
+
+Without `.dockerignore`, Docker may send your entire `.venv` (potentially hundreds of MB) to the Docker daemon during builds.
+
+One distinction: `.dockerignore` controls Docker build context; `.gitignore` controls Git tracking.
+
+## 3. Add `.editorconfig`
+
+<badge color="success">Recommended</badge>
+
+Helps maintain consistent formatting across VS Code and other editors.
+
+Create `.editorconfig`:
+
+<CodeBlock language="ini" editable>
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.yml]
+indent_size = 2
+
+[*.yaml]
+indent_size = 2
+
+[Makefile]
+indent_style = tab
