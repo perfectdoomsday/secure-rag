@@ -4,7 +4,7 @@ class Settings(BaseSettings):
     app_env: str = "development"
     app_secret: str = "dev-only-change-me"
     groq_api_key: str = ""
-    groq_model: str = "llama-3.3-70b-versatile"
+    groq_model: str = "openai/gpt-oss-20b"
     qdrant_url: str = "http://localhost:6333"
     qdrant_collection: str = "company_knowledge"
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"

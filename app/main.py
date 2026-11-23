@@ -336,7 +336,7 @@ def chat(
                 "classification",
                 "internal",
             ),
-            "excerpt": d.page_content[:220],
+            "excerpt": d.page_content[:500],
         }
         for d in secure_docs
     ]
